@@ -8,6 +8,7 @@ def home(request):
     'title': 'Home page',
     'pageName': 'Home Page',
     'clist': ['python', 'javascript', 'java'],
+    'numbers': [],
     'student_details': [
       {'name':'nikhil verma', 'phonenum':888888888},
       {'name':'mohit kumar',  'phonenum':777777777},

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,21 +12,25 @@
       background-color: #f4f4f9;
       color: #333;
     }
+
     header {
       background-color: #4CAF50;
       color: white;
       padding: 20px;
       text-align: center;
     }
-    section div{
+
+    section div {
       height: 10vh;
       width: 30vh;
       background-color: floralwhite;
     }
+
     main {
       padding: 20px;
       text-align: center;
     }
+
     footer {
       background: #333;
       color: white;
@@ -37,40 +42,54 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Welcome to My Website</h1>
     <p>{{pageName}}</p>
   </header>
 
-  
-    <h2>About This Page</h2>
-    <p>This is a clean and simple homepage built using only HTML and CSS. You can expand it by adding more sections or linking multiple pages.</p>
+
+  <h2>About This Page</h2>
+  <p>This is a clean and simple homepage built using only HTML and CSS. You can expand it by adding more sections or
+    linking multiple pages.</p>
   </main>
   <section>
     {% for n in clist %}
-      <div>
-        <h1>{{forloop.counter0}} {{n}}</h1>
-      </div>
+    <div>
+      <h1>{{forloop.counter0}} {{n}}</h1>
+    </div>
     {% endfor %}
   </section>
   <!-- numbering forloop.counter -->
 
-<table style="border: 2px solid black; border-radius: 4px; background-color: aliceblue; border-collapse: collapse; width: 50%; text-align: center;">
-  <tr style="border: 1px solid black;">
-    <th style="border: 1px solid black; padding: 8px;">Name</th>
-    <th style="border: 1px solid black; padding: 8px;">Phone num</th>
-  </tr>
-  {% for n in student_details %}
+  <table
+    style="border: 2px solid black; border-radius: 4px; background-color: aliceblue; border-collapse: collapse; width: 50%; text-align: center;">
+    <tr style="border: 1px solid black;">
+      <th style="border: 1px solid black; padding: 8px;">Name</th>
+      <th style="border: 1px solid black; padding: 8px;">Phone num</th>
+    </tr>
+    {% for n in student_details %}
     <tr style="border: 1px solid black;">
       <td style="border: 1px solid black; padding: 8px;">{{ n.name }}</td>
       <td style="border: 1px solid black; padding: 8px;">{{ n.phonenum }}</td>
     </tr>
+    {% endfor %}
+  </table>
+
+{% if numbers %}
+  {% for n in numbers %}
+    {% if n > 1 %}
+      <h3>{{ n }}</h3>
+    {% endif %}
   {% endfor %}
-</table>
+{% else %}
+  <h1>No data</h1>
+{% endif %}
 
   <footer>
     <p>© 2025 My Website | All Rights Reserved</p>
   </footer>
 </body>
+
 </html>
