@@ -4,7 +4,11 @@ from django.shortcuts import render
 # for displaying template file 
 
 def home(request):
-  return render(request, "index.html")
+  data = {
+    'title': 'Home page',
+    'pageName': 'Home Page',
+  }
+  return render(request, "index.html", data)
 
 def aboutUS(request):
   return HttpResponse("<h1>This is about us page</h1>")
