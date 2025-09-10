@@ -6,3 +6,6 @@ def aboutUS(request):
 
 def courses(request):
   return HttpResponse("<h1>This is avaliable courses</h1>")
+
+def allCourses(request, courseId):
+  return HttpResponse(courseId)
