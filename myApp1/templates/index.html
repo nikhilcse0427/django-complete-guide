@@ -77,7 +77,7 @@
     {% endfor %}
   </table>
 
-{% if numbers %}
+{% if numbers|length %}
   {% for n in numbers %}
     {% if n > 1 %}
       <h3>{{ n }}</h3>
