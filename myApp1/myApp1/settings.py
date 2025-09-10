@@ -54,7 +54,7 @@ ROOT_URLCONF = 'myApp1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR,""], 
+        'DIRS': [BASE_DIR,"templates"], #templates path setup
         # setting template path 
         'APP_DIRS': True,
         'OPTIONS': {
