@@ -1,0 +1,21 @@
+{% include 'header.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'css/project.css' %}">
+</head>
+<body>
+  <main>
+  <h2>Home Page</h2>
+  <p>This is the homepage content.</p>
+  <img src="{% static 'img/party.jpg' %}" alt="party image" width="300">
+</main>
+</body>
+</html>
+
+{% include 'footer.html' %}
+

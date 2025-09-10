@@ -27,3 +27,6 @@ def allCourses(request, courseId):
 
 def index1(request):
   return render(request, "index1.html")
+
+def web(request):
+  return render(request, "home.html")

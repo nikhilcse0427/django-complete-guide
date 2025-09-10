@@ -27,6 +27,7 @@ urlpatterns = [
     path('courses/', views.courses),
     path('courses-all/<int:courseId>', views.allCourses),
     path('index1/', views.index1),
+    path('web/',views.web),
 ]
 
 # Serve static files during development
