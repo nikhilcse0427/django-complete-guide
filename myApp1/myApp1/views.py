@@ -7,6 +7,11 @@ def home(request):
   data = {
     'title': 'Home page',
     'pageName': 'Home Page',
+    'clist': ['python', 'javascript', 'java'],
+    'student_details': [
+      {'name':'nikhil verma', 'phonenum':888888888},
+      {'name':'mohit kumar',  'phonenum':777777777},
+    ]
   }
   return render(request, "index.html", data)
 
