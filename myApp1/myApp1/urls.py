@@ -22,14 +22,16 @@ from myApp1 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.home, name='index'),
-    path('about-us/',views.aboutUS),
-    path('courses/', views.courses),
-    path('courses-all/<int:courseId>', views.allCourses),
-    path('index1/', views.index1),
-    path('web/',views.web),
+    path('signup/', views.signup)
+    path('login/', views.login)
 ]
 
 # Serve static files during development
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])
+    
+    
+    
+    
+create aviews in login logout ensuring name should greater 8 character and password atleast 4 character use inbuilt
+login signup

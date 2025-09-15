@@ -1,7 +1,8 @@
-from django.http import HttpResponse 
+from django.http import HttpResponse, HttpResponseRedirect
 #browser pe render karane ke liye only text content
 from django.shortcuts import render
 # for displaying template file 
+from service.models import Service
 
 def home(request):
   data = {
@@ -30,3 +31,27 @@ def index1(request):
 
 def web(request):
   return render(request, "home.html")
+
+def formGet(request):
+    output = None
+    try:
+        n1 = int(request.GET.get('num1'))
+        n2 = int(request.GET.get('num2'))
+        output = n1+n2
+        # print(n1+n2)
+    except:
+        pass
+
+    return render(request, "formGet.html", {'ans':output})
+
+def formPost(request):
+    output = None
+    try:
+        n1 = int(request.POST.get('num1'))
+        n2 = int(request.POST.get('num2'))
+        output = n1+n2
+        # print(n1+n2)
+    except:
+        pass
+
+    return render(request, "formPost.html", {'ans':output})

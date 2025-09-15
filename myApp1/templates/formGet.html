@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Form</title>
+</head>
+<body style="display:flex; justify-content:center; align-items:center; height:100vh;">
+
+  <div style="border:1px solid black; padding:15px; width:250px;">
+    <form method="GET">
+      <div style="display:flex; justify-content: center; margin-bottom:10px;">
+        <label for="val1" style="display:block; margin-bottom:5px;">Num1: </label>
+        <input type="number" name="num1" id="val1" style="padding:5px;">
+      </div>
+      <div style="display:flex; justify-content: center; margin-bottom:10px;">
+        <label for="val2" style="display:block; margin-bottom:5px;">Num2: </label>
+        <input type="number" name="num2" id="val2" style="padding:5px;">
+      </div>
+      <div style="display:flex; justify-content: center">
+        <button type="submit" style="background-color: rgb(62, 96, 146); font-weight: bold; color:azure; border-radius: 2px;">Submit</button>
+      </div>
+      {% if ans != None %}
+      <div style="text-align:center; margin-top:10px;">
+        <input type="text" value="{{ ans }}" readonly style="padding:5px; width:100%; text-align:center;">
+      </div>
+      {% endif %}
+    </form>
+  </div>
+
+</body>
+</html>
